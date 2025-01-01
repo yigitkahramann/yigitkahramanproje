@@ -1,0 +1,172 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+header {
+    background-image: url('https://ideacdn.net/idea/gq/21/myassets/products/318/075x300bey83.jpg?revision=1697143329');
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    animation: fadeInHeader 1.5s ease-out;
+}
+
+@keyframes fadeInHeader {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2em;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+    nav a:hover {
+        color: #f4a300;
+        transform: scale(1.1);
+    }
+
+.menu-section {
+    padding: 50px;
+    background-color: #444;
+    color: white;
+    background-image: url('https://images.pexels.com/photos/1939485/pexels-photo-1939485.jpeg?auto=compress&cs=tinysrgb&w=600');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.menu-category {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+    .menu-category div {
+        background-color: #555;
+        padding: 20px;
+        border-radius: 10px;
+        width: 22%;
+        text-align: center;
+        animation: fadeInItem 1s ease-in-out;
+        transform: scale(0.9);
+        transition: transform 0.3s ease;
+    }
+
+        .menu-category div:hover {
+            transform: scale(1.05);
+        }
+
+        .menu-category div img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+
+            .menu-category div img:hover {
+                transform: rotate(5deg);
+            }
+
+        .menu-category div h3 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+            animation: fadeInText 1.2s ease-out;
+        }
+
+        .menu-category div p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            animation: fadeInText 1.5s ease-out;
+        }
+
+.price {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #f4a300;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    animation: fadeInFooter 1.5s ease-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInItem {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInFooter {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 900px) {
+    .menu-category div {
+        width: 45%;
+    }
+}
+
+@media (max-width: 600px) {
+    .menu-category div {
+        width: 100%;
+    }
+}

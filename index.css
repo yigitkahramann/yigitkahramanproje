@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+header {
+    background-image: url('https://media.istockphoto.com/id/1358854536/tr/foto%C4%9Fraf/hookah-stands-on-the-table-in-pink-blue-neon-light.jpg?s=612x612&w=0&k=20&c=8_Uf6CDPE5FgKKuHuYOi5pl62jkL9zDRn-FRHOd3c4E=');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+    animation: fadeIn 2s ease-out;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    opacity: 0;
+    animation: fadeInOverlay 2s ease-out forwards;
+}
+
+h1 {
+    font-size: 4em;
+    margin-bottom: 20px;
+    animation: slideInFromTop 1.5s ease-out 1s forwards;
+    opacity: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+    nav ul li {
+        display: inline;
+        margin: 0 20px;
+    }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+            padding-bottom: 4px;
+        }
+
+            nav ul li a:before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                background-color: #f4a300;
+                left: 0;
+                bottom: 0;
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+            }
+
+            nav ul li a:hover:before {
+                transform: translateX(0);
+            }
+
+            nav ul li a:hover {
+                color: #f4a300;
+                transform: scale(1.1);
+            }
+
+.intro {
+    padding: 50px 0;
+    text-align: center;
+    background-color: #333;
+    animation: fadeIn 2s ease-out 1.5s forwards;
+}
+
+    .intro h2 {
+        font-size: 2.5em;
+        margin-bottom: 15px;
+        animation: slideInFromBottom 1.5s ease-out forwards;
+        opacity: 0;
+    }
+
+    .intro p {
+        font-size: 1.2em;
+        margin-bottom: 20px;
+        opacity: 0;
+        animation: fadeInUp 1.5s ease-out 1s forwards;
+    }
+
+.btn {
+    background-color: #f4a300;
+    color: #333;
+    padding: 15px 25px;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+    position: relative;
+    display: inline-block;
+}
+
+    .btn:hover {
+        background-color: #f47d00;
+        transform: translateY(-5px);
+    }
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    opacity: 0;
+    animation: fadeIn 2s ease-out 2s forwards;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5em;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .intro h2 {
+        font-size: 2em;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    .intro h2 {
+        font-size: 1.5em;
+    }
+
+    .intro p {
+        font-size: 1em;
+    }
+
+    .btn {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInOverlay {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
