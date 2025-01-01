@@ -1,11 +1,11 @@
-/* Genel stil ayarları */
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f9;
     margin: 0;
 }
 
-/* Game alanı */
+
 #gameArea {
     position: relative;
     width: 80%;
@@ -17,7 +17,7 @@ body {
     align-items: center;
 }
 
-/* Hareketli div */
+
 #movingDiv {
     position: absolute;
     width: 100px;
@@ -27,12 +27,12 @@ body {
     transition: transform 0.2s ease-in-out;
 }
 
-/* Navbar için özel stiller */
+
 .navbar {
     margin-bottom: 20px;
 }
 
-/* Responsive Tasarım */
+
 @media (max-width: 768px) {
     #gameArea {
         width: 100%;
